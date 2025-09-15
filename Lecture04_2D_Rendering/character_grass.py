@@ -27,7 +27,7 @@ while True:
             x += 2
         elif y >= 550:
             x -= 2
-        delay(0.01)
+        delay(0.001)
         if x == 400 and y == 90:
             break
 
@@ -39,9 +39,9 @@ while True:
         clear_canvas_now()
         grass.draw_now(400, 30)
         character.draw_now(x, y)
-        theta += 0.05
+        theta -= 0.05
         delay(0.01)
-        if theta > 3 * math.pi / 2:
+        if theta <= -math.pi * 2.5:
             break
     x = 400
     y = 90
